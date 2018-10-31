@@ -1,3 +1,5 @@
+CREATE DATABASE streamviewerdb;
+
 CREATE TABLE posts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(200),
