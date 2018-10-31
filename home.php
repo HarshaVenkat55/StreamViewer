@@ -8,7 +8,7 @@
 	//Get videos from channel by YouTube Data API
 	$API_key = 'AIzaSyA-4MyI2ejglrhcNIHtcTQURNX9TEIkvfg';
 	$channelID = 'UCpd3rD8JXjNUHVETOdlnB4g'; //USK Gaming channel
-	$maxResults = 12;
+	$maxResults = 25;
 
 	$videoList = json_decode(file_get_contents('https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId='.$channelID.'&maxResults='.$maxResults.'&key='.$API_key.''));
 
