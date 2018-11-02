@@ -2,7 +2,7 @@
 	session_start();
 
 	if(!isset($_SESSION['access_token'])){
-		header('Location: index.html');
+		header('Location: index.php');
 		exit();
 	}
 	//Get videos from channel by YouTube Data API

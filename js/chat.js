@@ -5,6 +5,7 @@ function ajaxCall(){
 		data: {videoId: p },
         success: (function (result){
             $("#div1").html(result);
+            console.log(result);
             scrollToBottom()
         })
 	})
@@ -19,7 +20,12 @@ function scrollToBottom(){
 	var div = document.getElementById('div1');
 	div.scrollTop = div.scrollHeight;
 }
-scrollToBottom();
+
+document.addEventListener('readystatechange', function() {
+	if (document.readyState === "complete") {
+      scrollToBottom();
+    }
+ });
 
 function sendMsg(message){
 	if($.trim(message).length != 0){

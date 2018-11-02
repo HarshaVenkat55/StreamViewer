@@ -7,7 +7,7 @@
 		$token = $gClient->fetchAccessTokenWithAuthCode($_GET['code']);
 		$_SESSION['access_token'] = $token;
 	} else {
-		header('Location: index.html');
+		header('Location: index.php');
 		exit();
 	}
 

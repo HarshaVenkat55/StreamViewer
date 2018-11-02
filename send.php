@@ -7,6 +7,7 @@ $videoId=$_POST['videoId'];
 $name=$_SESSION['givenName'];
 
 $sql="insert into posts(msg, name, videoId) values('$msg','$name', '$videoId')";
-$result=$conn->query($sql);
+$result=$conn->prepare($sql);
+$result->execute();
 
 ?>
